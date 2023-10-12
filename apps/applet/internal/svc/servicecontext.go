@@ -18,7 +18,7 @@ func NewServiceContext(c config.Config) *ServiceContext {
 	userRpc := zrpc.MustNewClient(c.UserRpc, zrpc.WithUnaryClientInterceptor(interceptors.ClientErrorInterceptor()))
 	bizRedis, err := redis.NewRedis(c.BizRedis)
 	if err != nil {
-		return nil
+		panic(err)
 	}
 	return &ServiceContext{
 		Config:   c,

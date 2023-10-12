@@ -6,15 +6,15 @@ import (
 	"github.com/zeromicro/go-zero/rest/httpx"
 	"jason-forum/pkg/xcode"
 
-	"jason-forum/apps/applet/internal/config"
-	"jason-forum/apps/applet/internal/handler"
-	"jason-forum/apps/applet/internal/svc"
+	"jason-forum/apps/article/api/internal/config"
+	"jason-forum/apps/article/api/internal/handler"
+	"jason-forum/apps/article/api/internal/svc"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	"github.com/zeromicro/go-zero/rest"
 )
 
-var configFile = flag.String("f", "etc/applet-api.yaml", "the config file")
+var configFile = flag.String("f", "etc/article-api.yaml", "the config file")
 
 func main() {
 	flag.Parse()
@@ -28,7 +28,7 @@ func main() {
 	ctx := svc.NewServiceContext(c)
 	handler.RegisterHandlers(server, ctx)
 
-	//自定义错误处理方法
+	// 自定义错误处理方法
 	httpx.SetErrorHandler(xcode.ErrHandler)
 
 	fmt.Printf("Starting server at %s:%d...\n", c.Host, c.Port)

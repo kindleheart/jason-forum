@@ -1,19 +1,20 @@
 Name: applet-api
 Host: 0.0.0.0
-Port: 9000
+Port: 9002
 Auth:
   AccessSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   AccessExpire: 604800
   RefreshSecret: xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   RefreshExpire: 2592000
   RefreshAfter: 604800
-UserRPC:
+Oss:
+  Endpoint: https://oss-cn-hangzhou.aliyuncs.com
+  AccessKeyId: LTAI5tE1k4pFQnQMoidb7JEn
+  AccessKeySecret: PlkiRavOfw61X1gw5ymHxdhEtXjLX7
+  BucketName: jason-forum
+ArticleRPC:
   Etcd:
     Hosts:
       - 127.0.0.1:2379
-    Key: user.rpc
+    Key: article.rpc
   NonBlock: true
-BizRedis:
-  Host: 127.0.0.1:6379
-  Pass:
-  Type: node

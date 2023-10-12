@@ -3,12 +3,11 @@ package main
 import (
 	"flag"
 	"fmt"
-	"jason-forum/pkg/interceptors"
-
 	"jason-forum/apps/user/rpc/internal/config"
 	"jason-forum/apps/user/rpc/internal/server"
 	"jason-forum/apps/user/rpc/internal/svc"
 	"jason-forum/apps/user/rpc/service"
+	"jason-forum/pkg/interceptors"
 
 	"github.com/zeromicro/go-zero/core/conf"
 	cs "github.com/zeromicro/go-zero/core/service"

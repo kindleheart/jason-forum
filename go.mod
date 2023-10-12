@@ -3,10 +3,12 @@ module jason-forum
 go 1.21
 
 require (
+	github.com/aliyun/aliyun-oss-go-sdk v2.2.9+incompatible
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/golang/protobuf v1.5.3
 	github.com/pkg/errors v0.9.1
 	github.com/zeromicro/go-zero v1.5.6
+	golang.org/x/sync v0.3.0
 	google.golang.org/grpc v1.58.2
 	google.golang.org/protobuf v1.31.0
 )
