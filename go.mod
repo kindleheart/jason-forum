@@ -10,7 +10,7 @@ require (
 	github.com/zeromicro/go-queue v1.1.8
 	github.com/zeromicro/go-zero v1.5.6
 	golang.org/x/sync v0.3.0
-	google.golang.org/grpc v1.58.2
+	google.golang.org/grpc v1.58.3
 	google.golang.org/protobuf v1.31.0
 )
 
